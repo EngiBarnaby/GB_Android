@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/MyCoolStyle"
+    >
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#efefef"
+        android:gravity="bottom|right|center_vertical"
+        android:maxLength="16"
+        android:padding="10dp"
+        android:text="@string/result"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/one"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/two"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@+id/button_1"
+        app:layout_constraintEnd_toStartOf="@id/button_3"
+        app:layout_constraintStart_toEndOf="@id/button_1"
+        app:layout_constraintTop_toTopOf="@+id/button_1"
+        android:onClick="onDigit"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/three"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@+id/button_2"
+        app:layout_constraintEnd_toEndOf="@id/plus"
+        app:layout_constraintStart_toEndOf="@id/button_2"
+        app:layout_constraintTop_toTopOf="@+id/button_2"
+        android:onClick="onDigit"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_3"
+        app:layout_constraintTop_toTopOf="@id/button_3"
+        android:onClick="onOperator"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/four"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintEnd_toStartOf="@id/button_5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_1"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/five"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@+id/button_4"
+        app:layout_constraintEnd_toStartOf="@id/button_6"
+        app:layout_constraintStart_toEndOf="@+id/button_4"
+        app:layout_constraintTop_toTopOf="@id/button_4"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/six"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_5"
+        app:layout_constraintEnd_toStartOf="@id/minus"
+        app:layout_constraintStart_toEndOf="@id/button_5"
+        app:layout_constraintTop_toTopOf="@id/button_5"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minus"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_6"
+        app:layout_constraintTop_toTopOf="@id/button_6"
+        android:onClick="onOperator"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/seven"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintEnd_toStartOf="@id/button_8"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_4"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/eight"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_7"
+        app:layout_constraintEnd_toStartOf="@id/button_9"
+        app:layout_constraintStart_toEndOf="@id/button_7"
+        app:layout_constraintTop_toTopOf="@id/button_7"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/nine"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_8"
+        app:layout_constraintEnd_toStartOf="@+id/multiply"
+        app:layout_constraintStart_toEndOf="@id/button_8"
+        app:layout_constraintTop_toTopOf="@id/button_8"
+        android:onClick="onDigit"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mult"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintBottom_toBottomOf="@id/button_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_9"
+        app:layout_constraintTop_toTopOf="@id/button_9"
+        android:onClick="onOperator"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/zero"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintEnd_toStartOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/button_7"
+        app:layout_constraintTop_toBottomOf="@+id/button_7"
+        android:onClick="onDigit"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/dot"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintEnd_toStartOf="@+id/divide"
+        app:layout_constraintStart_toStartOf="@+id/button_9"
+        app:layout_constraintTop_toBottomOf="@+id/button_9"
+        android:onClick="onDecimalPoint"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onOperator"
+        android:text="@string/divide"
+        android:textSize="@dimen/btn_size"
+        app:layout_constraintEnd_toEndOf="@+id/multiply"
+        app:layout_constraintStart_toEndOf="@+id/point"
+        app:layout_constraintTop_toTopOf="@+id/point" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_equal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/equal"
+        app:layout_constraintEnd_toEndOf="@+id/point"
+        app:layout_constraintStart_toStartOf="@+id/button_0"
+        app:layout_constraintTop_toBottomOf="@+id/button_0"
+        android:onClick="onEqual"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_clr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="@+id/divide"
+        app:layout_constraintStart_toStartOf="@+id/divide"
+        app:layout_constraintTop_toBottomOf="@+id/divide"
+        android:onClick="onClear"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

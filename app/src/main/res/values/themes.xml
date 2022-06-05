@@ -13,4 +13,15 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="MyCoolStyle" parent="Theme.GB_Android">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:layout_marginStart">@dimen/margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin</item>
+        <item name="android:layout_marginTop">@dimen/margin</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
 </resources>
