@@ -23,7 +23,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CalculatorActivityBinding.inflate(layoutInflater)
+        val style = intent.getIntExtra("STYLE", 0)
+
+        theme.applyStyle(style, true)
+
         setContentView(binding.root)
+
 
         state  = savedInstanceState?.getParcelable(KEY_STATE) ?: State(
             number = "0",
